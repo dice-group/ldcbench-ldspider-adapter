@@ -1,22 +1,16 @@
 package org.dice_research.ldspider.adapter.system;
 
+import static org.hobbit.core.Constants.CONTAINER_TYPE_SYSTEM;
+
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
-import java.util.concurrent.Semaphore;
 
 import org.apache.jena.rdf.model.Literal;
-import org.dice_research.squirrel.data.uri.serialize.Serializer;
-import org.dice_research.squirrel.data.uri.serialize.java.GzipJavaUriSerializer;
 import org.hobbit.core.Commands;
 import org.hobbit.core.components.AbstractSystemAdapter;
-import org.hobbit.core.components.ContainerStateObserver;
 import org.hobbit.core.rabbit.RabbitMQUtils;
 import org.hobbit.utils.rdf.RdfHelper;
-
-import static org.hobbit.core.Constants.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
