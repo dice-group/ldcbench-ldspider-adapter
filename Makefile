@@ -1,4 +1,4 @@
-IMAGE = git.project-hobbit.eu:4567/ldcbench/ldcbench-ldspider-adapter
+IMAGE = git.project-hobbit.eu:4567/ldcbench/ldcbench-ldspider-filesink-adapter
 
 build:
 	mvn clean package -DskipTests
@@ -20,7 +20,7 @@ push-images:
 	docker push $(IMAGE)
 
 add-hobbit-remote:
-	git remote |grep hobbit ||git remote --verbose add hobbit https://git.project-hobbit.eu/ldcbench/ldcbench-ldspider-adapter
+	git remote |grep hobbit ||git remote --verbose add hobbit https://git.project-hobbit.eu/ldcbench/ldcbench-ldspider-filesink-adapter
 
 push-hobbit: add-hobbit-remote
 	git push --verbose hobbit master
